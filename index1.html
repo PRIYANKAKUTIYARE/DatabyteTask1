@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matching_Cards_GAME</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="script1.js" async></script>
+</head>
+
+<body>
+    <h1 class="Title-of-the-Game">Matching-Cards</h1>
+    <h2 class="second-Title">Let's check your memory</h2>
+    <div class="overlay-text visible">
+        Click to Start
+    </div>
+    <div id="game-over-text" class="overlay-text ">
+        GAME OVER
+        <span class="overlay-text-small">
+            Click to Restart
+        </span>
+    </div>
+    <div id="victory-text" class="overlay-text">
+        VICTORY
+        <span class="overlay-text-small">
+            Click to Restart
+        </span>
+    </div>
+    <div class="container">  
+        <div class="info-container">
+            <div class="info">
+                TIME <span id="time-remaining">60</span>
+            </div>
+            <div class="info">
+                FLIPS <span id="flips">0</span>
+            </div>
+        </div>
+        <div class="cardsset" id="Cardno-1">
+            <div class="cardfaceBack">
+                <img src="imagesassets/frontImage.jpg" class="Backside">
+            </div>
+
+            <div class="cardfacefront">
+                <img src="imagesassets/image511.jpg" alt="" class="frontside">
+            </div>
+        </div>
+        <div class="cardsset" id="Cardno-2">
+            <div class="cardfaceBack">
+                <img src="imagesassets/frontImage.jpg" class="Backside">
+            </div>
+
+            <div class="cardfacefront">
+                <img src="imagesassets/image11.jpg" alt="" class="frontside">
+            </div>
+        </div>
+        <div class="cardsset" id="Cardno-3">
+            <div class="cardfaceBack">
+                <img src="imagesassets/frontImage.jpg" class="Backside">
+            </div>
+
+            <div class="cardfacefront">
+                <img src="imagesassets/image41.jpg" alt="" class="frontside">
+            </div>
+        </div>
+        <div class="cardsset" id="Cardno-4">
+            <div class="cardfaceBack">
+                <img src="imagesassets/frontImage.jpg" class="Backside">
+            </div>
+
+            <div class="cardfacefront">
+                <img src="imagesassets/image71.jpg" alt="" class="frontside">
+            </div>
+        </div>
+        <div class="cardsset" id="Cardno-5">
+            <div class="cardfaceBack">
+                <img src="imagesassets/frontImage.jpg" class="Backside">
+            </div>
+
+            <div class="cardfacefront">
+                <img src="imagesassets/image31.jpg" alt="" class="frontside">
+            </div>
+        </div>
+        <div class="cardsset" id="Cardno-6">
+            <div class="cardfaceBack">
+                <img src="imagesassets/frontImage.jpg" class="Backside">
+            </div>
+
+            <div class="cardfacefront">
+                <img src="imagesassets/image81.jpg" alt="" class="frontside">
+            </div>
+        </div>
+        <div class="cardsset" id="Cardno-7">
+            <div class="cardfaceBack">
+                <img src="imagesassets/frontImage.jpg" class="Backside">
+            </div>
+
+            <div class="cardfacefront">
+                <img src="imagesassets/image511.jpg" alt="" class="frontside">
+            </div>
+        </div>
+        <div class="cardsset" id="Cardno-8">
+            <div class="cardfaceBack">
+                <img src="imagesassets/frontImage.jpg" class="Backside">
+            </div>
+
+            <div class="cardfacefront">
+                <img src="imagesassets/image21.jpg" alt="" class="frontside">
+            </div>
+        </div>
+        <div class="cardsset" id="Cardno-9">
+            <div class="cardfaceBack">
+                <img src="imagesassets/frontImage.jpg" class="Backside">
+            </div>
+
+            <div class="cardfacefront">
+                <img src="imagesassets/image11.jpg" alt="" class="frontside">
+            </div>
+        </div>
+        <div class="cardsset" id="Cardno-10">
+            <div class="cardfaceBack">
+                <img src="imagesassets/frontImage.jpg" class="Backside">
+            </div>
+
+            <div class="cardfacefront">
+                <img src="imagesassets/image41.jpg" alt="" class="frontside">
+            </div>
+        </div>
+        <div class="cardsset" id="Cardno-11">
+            <div class="cardfaceBack">
+                <img src="imagesassets/frontImage.jpg" class="Backside">
+            </div>
+
+            <div class="cardfacefront">
+                <img src="imagesassets/image61.jpg" alt="" class="frontside">
+            </div>
+        </div>
+        <div class="cardsset" id="Cardno-12">
+
+            <div class="cardfaceBack">
+                <img src="imagesassets/frontImage.jpg" class="Backside">
+            </div>
+
+            <div class="cardfacefront">
+                <img src="imagesassets/image81.jpg" alt="" class="frontside">
+            </div>
+        </div>
+        <div class="cardsset" id="Cardno-13">
+            <div class="cardfaceBack">
+                <img src="imagesassets/frontImage.jpg" class="Backside">
+            </div>
+
+            <div class="cardfacefront">
+                <img src="imagesassets/image61.jpg" alt="" class="frontside">
+            </div>
+        </div>
+        <div class="cardsset" id="Cardno-14">
+            <div class="cardfaceBack">
+                <img src="imagesassets/frontImage.jpg" class="Backside">
+            </div>
+
+            <div class="cardfacefront">
+                <img src="imagesassets/image21.jpg" alt="" class="frontside">
+            </div>
+        </div>
+        <div class="cardsset" id="Cardno-15">
+            <div class="cardfaceBack">
+                <img src="imagesassets/frontImage.jpg" class="Backside">
+            </div>
+
+            <div class="cardfacefront">
+                <img src="imagesassets/image71.jpg" alt="" class="frontside">
+            </div>
+        </div>
+        <div class="cardsset" id="Cardno-16">
+            <div class="cardfaceBack">
+                <img src="imagesassets/frontImage.jpg" class="Backside">
+            </div>
+
+            <div class="cardfacefront">
+                <img src="imagesassets/image31.jpg" alt="" class="frontside">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+
+@font-face {
+  font-family: 'Lilita One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lilitaone/v13/i7dPIFZ9Zz-WBtRtedDbYE98RWq7.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+
+@font-face {
+  font-family: 'Righteous';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/righteous/v14/1cXxaUPXBpj2rGoU7C9WhnGFucE.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+
+@font-face {
+  font-family: 'Signika';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/signika/v20/vEFO2_JTCgwQ5ejvMV0O96D01E8J0tJlHKbBjM4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(#ebd292, #6f4d3f);
+}
+
+.Title-of-the-Game {
+  color: rgb(19, 11, 11);
+  font-family: 'Lilita One';
+  font-size: 6em;
+  font-weight: normal;
+  text-align: center;
+}
+
+.second-Title {
+  color: #292621;
+  font-family: 'Lilita One';
+  font-size: 4em;
+  font-weight: normal;
+  text-align: center;
+}
+
+.info-container {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info {
+  font-family: Signika;
+  color: #43211f;
+  font-size: 4em;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  margin: 50px;
+  justify-content: center;
+  perspective: 500px;
+}
+
+.cardsset {
+  background-color: black;
+  position: relative;
+  height: 169px;
+  width: 125px;
+}
+
+.cardfaceBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  backface-visibility: hidden;
+  border-width: 1px;
+  border-style: solid;
+  transition: transform 500ms ease-in-out;
+}
+
+.cardsset.visible .cardfaceBack {
+  transform: rotateY(-180deg);
+}
+.cardsset.visible .cardfaceFront {
+  transform: rotateY(0deg);
+}
+
+/* .cardsset:hover .cardfaceBack {
+  transform: rotateY(-180deg);
+}
+
+.cardsset:hover .cardfaceFront {
+  transform: rotateY(0deg);
+} */
+
+.overlay-text {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: #a2724e;
+  font-family: serif;
+}
+
+.overlay-text-small {
+  font-size: .3em;
+}
+
+.overlay-text.visible {
+  display: flex;
+  flex-direction: column;
+  animation: overlay-grow 500ms forwards;
+}
+.cardsset.matched .cardfaceFront {
+  animation: dance 1s linear infinite 500ms;
+}
+.cardfaceFront {
+  transition: transform 100ms ease-in-out;
+  transform: scale(.9);
+}
+@keyframes overlay-grow {
+  from {
+    background-color: rgba(58, 57, 57, 0);
+    font-size: 0;
+  }
+
+  to {
+    background-color: rgba(30, 29, 29, 0.8);
+    font-size: 10em;
+  }
+}
+@media (max-width: 500px) {
+  .game-container {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .game-info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
